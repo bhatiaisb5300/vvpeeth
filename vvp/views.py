@@ -104,4 +104,4 @@ def login(request):
 
 def logout_view(request):
     logout(request)
-    return render(request,'login.html',dict={'msg':'Logged Out Successfully!'})
+    return render(request,'login.html',{'msg':'Logged Out Successfully!'})
