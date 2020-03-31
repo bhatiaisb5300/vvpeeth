@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %} Our Gems {% endblock %}
+{% block content %}
+  <!-- end navigation -->
+  <div class="topper-cover">
+    <img src='{% static "img/topper-cover.jpg" %}' alt="">
+  </div>
+<div class="container gems-container">
+  <div class="class-title">
+    <center>
+      <h1>Class 10th Acheivers</h1>
+
+      </center>
+<hr class="underline">
+  </div>
+  <div class="toppers">
+  <div class="row">
+    <div class="col-lg-3 col-md-6">
+      <div class="card" style="width: 18rem; height:28rem;">
+      <img class="card-img-top" src='{% static "img/portrait.jfif" %}' alt="Card image cap">
+      <div class="card-body">
+        <center>
+          <h5 class="Name">Rohit Kumar</h5>
+          <h5 class="Percentage">91%</h5>
+        </center>
+      </div>
+    </div>
+   </div>
+  </div>
+  </div>
+
+  <div class="class-title">
+    <center>
+      <h1>Class 12th Acheivers</h1>
+
+      </center>
+    <hr class="underline">
+  </div>
+  <div class="toppers">
+  <div class="row">
+    <div class="col-lg-3 col-md-6">
+      <div class="card" style="width: 18rem; height:28rem;">
+      <img class="card-img-top" src='{% static "img/portrait.jfif" %}' alt="Card image cap">
+      <div class="card-body">
+        <center>
+          <h5 class="Name">Rohit Kumar</h5>
+          <h5 class="Percentage">91%</h5>
+        </center>
+      </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+</div>
+{% endblock %}

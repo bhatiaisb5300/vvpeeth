@@ -1,0 +1,19 @@
+.gems-container {
+  margin: 7rem;
+
+}
+.card img{
+  max-width: 18rem;
+  max-height: 20rem;
+
+}
+.topper-cover img{
+  width: 100%;
+}
+.class-title h1{
+  color: #142850;
+}
+.underline {
+border: 0.2rem solid #142850;
+border-radius: 5px;
+}

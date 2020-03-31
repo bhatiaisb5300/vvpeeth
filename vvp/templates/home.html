@@ -1,0 +1,271 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %} Vivekanand {% endblock %}
+<!-- end navigation -->
+<!-- header section -->
+{% block content %}
+<header class="header">
+<div class="text-box">
+  <h1 class="heading-primary">
+    <span class="heading-primary-main">vivekanand Vidyapeeth</span>
+    <span class="heading-primary-sub"> welcomes you</span>
+  </h1>
+  <a href="#about" class="btn btn-white btn-animated">About us</a>
+</div>
+</header>
+
+
+<!-- about section -->
+<div class="about-container">
+  <div class="container">
+    <div id="about" class="row offset">
+           <!-- start animation -->
+            <div class="col-lg-6 os-animation" data-aos="fade-right" data-aos-offset="200" data-aos-delay="50">
+            <div class="narrow text-center">
+              <div class="content" id="about">
+                <h1 class="about__heading">About Vivekanand Vidyapeeth</h1>
+                <hr class="title-underline">
+                <p class="about__para">The Institution which came into being on 11-10-69 with an ambitious aim of imparting formal education to the wiling wards of a sizable section of the employees of Bhilai Steel Plant and others at least in their formative years through the medium of the mother tongue: Bengali has come of age. Our School was started in the month of October 1969 with two independent media of instruction [i.e. Bengali & English]. In the year 1980 our first batch, comprising of sixteen students, appeared in the Higher Secondary Examination of the MP Board. Our school is now run with the English medium section, Hindi being one of the compulsory subjects. Good citizens make a nation strong and the real strength lies in the development of character and intellectual power at all levels. This is what education is all about and this is the area in which we, in our modest way, tried to serve the community and the nation by establishing an institution after a hallowed name of "Swami Vivekananda"</p>
+              </div>
+            </div>
+            </div>
+            <div class="col-lg-6 " data-aos="fade-left" data-aos-offset="200" data-aos-delay="50" >
+              <img src='{% static "img/girl.jpg" %}' class="about__img"alt="">
+            </div>
+            <div class="admission">
+              <img src='{% static "img/admission.jpg" %}' alt="">
+            </div>
+           <!-- end animation -->
+    </div>
+
+    <!-- principals desk -->
+    <div id="desk" class="row offset">
+      <div class="col-lg-6 " data-aos="fade-left" data-aos-offset="200" data-aos-delay="50" >
+        <img src='{% static "img/princi.jfif" %}' class="about__img" alt="">
+      </div>
+      <div class="col-lg-6 os-animation" data-aos="fade-right" data-aos-offset="200" data-aos-delay="50">
+      <div class="narrow text-center">
+        <div class="content">
+          <h1 class="about__heading">Principal's Message</h1>
+          <hr class="title-underline">
+          <p class="about__para">Dear Parents, With our motto "Education to All". It has been very well said that "without ideal,without efforts,without philosophical continuity there is no such things as Education. The team of our dedicated teaching staff and other co-workers are imparting value based teaching to our students and giving them confidence to face ever increasing challenges of the world.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Gallery -->
+
+<div class="gallery-sec">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="header-img text-center">
+          <h1 style="color:#142850;">Gallery</h1>
+          <hr class="title-underline">
+        </div>
+
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-4">
+        <div class="single-album" data-aos="flip-left" data-aos-offset="200" data-aos-delay="200" data-aos-duration="800">
+          <div class="album-img">
+            <img src='{% static "img/grad.jpg" %}' alt="">
+          </div>
+
+        <div class="album-content">
+          <div class="album-info">
+            <h3>Annual Function</h3>
+            <p>"it was great"</p>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipi dolore magna aliqua. Ut enim ad minim </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="single-album" data-aos="flip-up" data-aos-offset="200" data-aos-delay="250" data-aos-duration="800">
+        <div class="album-img">
+          <img src='{% static "img/grad.jpg" %}' alt="">
+        </div>
+
+      <div class="album-content">
+        <div class="album-info">
+          <h3>Annual Function</h3>
+          <p>"it was great"</p>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipi dolore magna aliqua. Ut enim ad minim </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-md-6 col-lg-4">
+    <div class="single-album" data-aos="flip-right" data-aos-offset="200" data-aos-delay="250" data-aos-duration="800">
+      <div class="album-img">
+        <img src='{% static "img/grad.jpg" %}' alt="">
+      </div>
+
+    <div class="album-content">
+      <div class="album-info">
+        <h3>Annual Function</h3>
+        <p>"it was great"</p>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipi dolore magna aliqua. Ut enim ad minim </p>
+    </div>
+  </div>
+
+</div>
+
+<div class="col-md-6 col-lg-4">
+  <div class="single-album" data-aos="flip-left" data-aos-offset="200" data-aos-delay="250" data-aos-duration="800">
+    <div class="album-img">
+      <img src='{% static "img/grad.jpg" %}' alt="">
+    </div>
+
+  <div class="album-content">
+    <div class="album-info">
+      <h3>Annual Function</h3>
+      <p>"it was great"</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipi dolore magna aliqua. Ut enim ad minim </p>
+  </div>
+</div>
+
+</div>
+<div class="col-md-6 col-lg-4">
+  <div class="single-album" data-aos="flip-down" data-aos-offset="200" data-aos-delay="250" data-aos-duration="800">
+    <div class="album-img">
+      <img src='{% static "img/grad.jpg" %}' alt="">
+    </div>
+
+  <div class="album-content">
+    <div class="album-info">
+      <h3>Annual Function</h3>
+      <p>"it was great"</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipi dolore magna aliqua. Ut enim ad minim </p>
+  </div>
+</div>
+
+</div>
+<div class="col-md-6 col-lg-4">
+  <div class="single-album" data-aos="flip-left" data-aos-offset="200" data-aos-delay="250" data-aos-duration="800">
+    <div class="album-img">
+      <img src='{% static "img/grad.jpg" %}' alt="">
+    </div>
+
+  <div class="album-content">
+    <div class="album-info">
+      <h3>Annual Function</h3>
+      <p>"it was great"</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipi dolore magna aliqua. Ut enim ad minim </p>
+  </div>
+</div>
+
+</div>
+
+  </div>
+</div>
+  </div>
+
+<!--
+=========News And Events===== -->
+
+<div style="margin-top: 5rem;" class="newsEvents">
+  <div class="content">
+    <center>
+      <h1  class="about__heading">Notices And Events</h1>
+      <hr style="width: 40%;" class="title-underline">
+    </center>
+
+    </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="news-events left-news-event">
+          <div class="news-events-img">
+              <img src='{ static "img/child.jpg" %}' alt="">
+            </div>
+
+          <div class="news-events-info">
+            <div class="news-events-date">
+              <span>Tuesday</span>
+              <span>March 22 2020</span>
+            </div>
+            <h1 class="news-events-title">Plantation day Celebration</h1>
+            <p class="news-events-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sdhgfhthyhyjrkytkyyky</p>
+             <a href="#" class="news-event-read_more">Read more</a>
+          </div>
+      </div>
+    </div>
+
+
+
+    <div class="col-md-6">
+      <div class="news-events">
+          <div class="news-events-img">
+              <img src="img/child.jpg" alt="">
+          </div>
+          <div class="news-events-info">
+            <div class="news-events-date">
+              <span>Tuesday</span>
+              <span>March 22 2020</span>
+            </div>
+            <h1 class="news-events-title">Plantation day Celebration</h1>
+            <p class="news-events-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+             <a href="#" class="news-event-read_more">Read more</a>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="news-events left-news-event">
+          <div class="news-events-img">
+              <img src="img/child.jpg" alt="">
+          </div>
+          <div class="news-events-info">
+            <div class="news-events-date">
+              <span>Tuesday</span>
+              <span>March 22 2020</span>
+            </div>
+            <h1 class="news-events-title">Plantation day Celebration</h1>
+            <p class="news-events-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+             <a href="#" class="news-event-read_more">Read more</a>
+          </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="news-events">
+          <div class="news-events-img">
+              <img src="img/child.jpg" alt="">
+          </div>
+          <div class="news-events-info">
+            <div class="news-events-date">
+              <span>Tuesday</span>
+              <span>March 22 2020</span>
+            </div>
+            <h1 class="news-events-title">Plantation day Celebration</h1>
+            <p class="news-events-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+             <a href="#" class="news-event-read_more">Read more</a>
+          </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ===============map================ -->
+
+  <div style="width: 100%; margin-top: 50px;" id="map">
+   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14879.086965857477!2d81.3592063!3d21.2012247!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8787cfaefa11553!2sVivekanand%20Vidyapeeth%20Hindi%20Medium%20Middle%20School!5e0!3m2!1sen!2sin!4v1585328521533!5m2!1sen!2sin" width="100%" height="500" frameborder="0" style="border:0"></iframe>
+</div>
+{% endblock %}
