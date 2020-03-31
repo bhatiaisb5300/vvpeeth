@@ -11,6 +11,7 @@
 
 .header{
  height: 100vh;
+
  background-image: linear-gradient(to right bottom,rgba(12, 123, 147, 0.8),rgba(20, 40, 80, 0.8)),url(../img/hero3.jpg);
  background-size: cover;
  background-position: top;
@@ -153,7 +154,7 @@
 
 }
 .title-underline{
-  border: 0.2rem solid #142850;
+  border: 0.21rem solid #142850;
   border-radius: 5px;
 }
 .about__para{
@@ -162,7 +163,7 @@
   color: #77777;
   font-weight: 400;
 }
-.about__img{
+.about-container img{
 
   max-width: 45rem;
   min-width: 35rem;
@@ -170,7 +171,7 @@
   padding: 5px;
   align-items: center;
   box-shadow: 0 4px 8px 0 rgba(20, 40, 80, 0.8), 0 6px 20px 0 rgba(20, 40, 80, 0.8);
-  margin-left:4rem;
+
 }
 .about__heading{
   color: #142850;
@@ -187,10 +188,7 @@
   max-width: 45rem;
   max-height: 20rem
 }
-#desk{
-  position: relative;;
-  bottom: 15rem;
-}
+
 
 /* ==========News and Events========== */
 
@@ -303,5 +301,14 @@
     min-width: 100%;
     max-width:100%;
     transform: translate(0,-.8);
+  }
+}
+@media (max-width: 36rem) {
+  .about__img {
+    width: 26rem;
+    display: block;
+    margin-left: auto;
+  margin-right: auto;
+
   }
 }

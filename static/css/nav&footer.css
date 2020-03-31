@@ -56,6 +56,7 @@ body {
 }
 .navbar-nav li {
   padding-right: .8rem;
+  font-size: 1.5rem;
   color: #ffffff;
 }
 .navbar-nav .nav-link {
@@ -78,9 +79,9 @@ body {
 
 a.navbar-brand.mybrand{
   color: #142850;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
     transition: transform .2s;
-    font-size: 2.8rem;
+    font-size: 2.7rem;
 }
 a.navbar-brand.mybrand:hover{
   -ms-transform: scale(1.1); /* IE 9 */
@@ -145,7 +146,7 @@ color:#1DA1F2;
   color: #ffffff;
 }
 .widget-title-underline{
-  border: .2rem solid #00a8cc;
+  border: .21rem solid #00a8cc;
 
 }
 .footer-container{
@@ -162,4 +163,47 @@ color:#1DA1F2;
   text-align: center;
   font-size: 1.3rem;
   padding-top: .4rem;
+}
+.title-underline{
+  border: 0.21rem solid #142850;
+  border-radius: 5px;
+}
+@media (min-width: 858px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 780px) {
+    html {
+        font-size: 11px;
+    }
+}
+
+@media (min-width: 702px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 724px) {
+    html {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 623px) {
+    html {
+        font-size: 8px;
+    }
+}
+@media (max-width: 38rem) {
+  a.navbar-brand.mybrand {
+    font-size: 2.1rem;
+  }
+}
+@media (max-width: 38rem) {
+  .footer-bottom p {
+    font-size: 1rem;
+  }
 }

@@ -7,6 +7,13 @@
     <img src='{% static "img/topper-cover.jpg" %}' alt="">
   </div>
 <div class="container gems-container">
+  {% if user.is_authenticated %}
+  <div class="row">
+    <div class="add-btn" style="text-align:center; margin:0 auto;">
+      <a href="{% url 'vvp:gems_form' %}"><button type="button" class="login-btn" name="button">Add Entry</button></a>
+    </div>
+  </div>
+  {% endif %}
   <div class="class-title">
     <center>
       <h1>Class 10th Acheivers</h1>
@@ -16,17 +23,20 @@
   </div>
   <div class="toppers">
   <div class="row">
-    <div class="col-lg-3 col-md-6">
+    {% for item in tenth %}
+    <div class="col-lg-3 col-6 ">
       <div class="card" style="width: 18rem; height:28rem;">
-      <img class="card-img-top" src='{% static "img/portrait.jfif" %}' alt="Card image cap">
+      <img class="card-img-top" src='{{item.Photo.url}}' height="200px" width="160px" alt="Card image cap">
       <div class="card-body">
         <center>
-          <h5 class="Name">Rohit Kumar</h5>
-          <h5 class="Percentage">91%</h5>
+          <h5 class="Name">{{item.Name}}</h5>
+          <h5 class="Percentage">{{item.Marks}}</h5>
+          <h5 class="Percentage">{{item.Batch}}</h5>
         </center>
       </div>
     </div>
    </div>
+   {% endfor %}
   </div>
   </div>
 
@@ -39,17 +49,19 @@
   </div>
   <div class="toppers">
   <div class="row">
-    <div class="col-lg-3 col-md-6">
+    {% for item in twelth %}
+    <div class="col-lg-3 col-6">
       <div class="card" style="width: 18rem; height:28rem;">
-      <img class="card-img-top" src='{% static "img/portrait.jfif" %}' alt="Card image cap">
+      <img class="card-img-top" src='{{item.Photo.url}}' alt="Card image cap">
       <div class="card-body">
         <center>
-          <h5 class="Name">Rohit Kumar</h5>
-          <h5 class="Percentage">91%</h5>
+          <h5 class="Name">{{item.Name}}</h5>
+          <h5 class="Percentage">{{item.Marks}}</h5>
         </center>
       </div>
       </div>
     </div>
+    {% endfor %}
   </div>
   </div>
 

@@ -27,7 +27,7 @@ DEBUG = True
 if os.path.exists(os.path.join(BASE_DIR, 'db.sqlite3')):
     ALLOWED_HOSTS = []
 else:
-    ALLOWED_HOSTS = ['139.59.11.189']
+    ALLOWED_HOSTS = ['139.59.11.189','vvpeethbhilai.tk','www.vvpeethbhilai.tk']
 
 # Application definition
 

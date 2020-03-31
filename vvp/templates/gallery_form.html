@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %} Add Photo {% endblock %}
+{% block content %}
+
+
+<!-- ===============login================ -->
+
+<section class="section-login">
+  <div class="row">
+
+    <div class="login">
+       <div class="login-form" style="position:relative; bottom:3.5rem;">
+          <form class="form"  method="POST">
+            {% csrf_token %}
+            <div class="login-heading">
+              <h2>Add Images To Gallery</h2>
+              <hr class="login-underline">
+            </div>
+            {% if msg %}
+            <div class="text-grey">
+              <h3>{{msg}}</h3>
+            </div>
+            {% endif %}
+            <div class="form-group">
+               <input type="file" class="form-input" id="user" name='photo' placeholder="Upload Photo" required>
+               <label for="user" class="form-label">Photo</label>
+            </div>
+            <div class="form-group">
+               <input type="text" class="form-input" id="title" name='title' placeholder="Title" required>
+               <label for="title" class="form-label">Title</label>
+            </div>
+            <div class="form-group">
+               <input type="text" class="form-input" id="desc" name='Description' placeholder="Description" required>
+               <label for="desc" class="form-label">Description</label>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="login-btn" name="login">Submit</button>
+            </div>
+          </form>
+       </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

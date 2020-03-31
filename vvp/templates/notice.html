@@ -3,4 +3,77 @@
 {% block title %} Notices & Events {% endblock %}
 {% block content %}
 
+<div class="gallery-sec" style="background-image:none; margin-top:7rem;">
+  <div class="container">
+    {% if user.is_authenticated %}
+    <div class="row" >
+      <div class="add-btn" style="text-align:center; margin:0 auto;">
+        <a href="{% url 'vvp:notice_form' %}"><button type="button" style="margin: 0 auto;" class="login-btn" name="button">Add Entry</button></a>
+      </div>
+    </div>
+    {% endif %}
+    <div class="row">
+      <div class="col-md-12">
+        <div class="header-img text-center">
+          <h1 style="color:#142850; font-size: 3rem; text-transform: uppercase; font-weight:600;">Notices and Events</h1>
+          <hr class="title-underline" style="border: .2rem solid rgba(20, 40, 80, 1);">
+        </div>
+
+      </div>
+
+    </div>
+    <div class="row gallerys">
+      {% for item in item %}
+      <div class="col-md-6">
+        <div class="news-events left-news-event">
+          <div class="news-events-img">
+            <img src="{{item.Photo.url}}" alt="">
+          </div>
+          <div class="news-events-info">
+            <div class="news-events-date">
+              <span>{{item.date|date:'l'}}</span>
+              <span>{{item.date|date}}</span>
+            </div>
+            <h1 class="news-events-title">{{item.Title|truncatechars:10}}</h1>
+            <p class="news-events-text">{{item.Description|truncatechars:15}}</p>
+            <a href="#" class="news-event-read_more" data-toggle="modal" data-target="#popup{{forloop.counter}}">Read more </a>
+          </div>
+        </div>
+      </div>
+
+  <!-- =================popup================= -->
+  <!-- Modal 1 -->
+  <div class="modal fade" id="popup{{forloop.counter}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header" style=" margin-left: 20px;">
+          <h1 class="modal-title news-events-title" id="exampleModalLongTitle">{{item.Title}}</h1>
+          <div class="news-events-date " style="margin-left: 8rem;">
+            <span>{{item.date|date:'l'}}</span>
+            <span>{{item.date|date}}</span>
+          </div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <center>
+            <img src="{{item.Photo.url}}" style="width:90%; margin: 10px; border-radius: 10px;" alt="">
+          </center>
+          <p class="about__para" style="margin: 10px;">{{item.Description}}</p>
+        </div>
+
+        <div class="modal-footer">
+      {% if item.File %}
+      <a href="{{item.File.url}}" class="news-event-read_more " style="margin: 0 auto;" download>Download PDF</a>
+      {% endif %}
+      </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+</div>
+</div>
+
 {% endblock %}

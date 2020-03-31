@@ -10,18 +10,22 @@ class alumni(models.Model):
     Photo = models.FileField(upload_to='alumni/')
     address = models.CharField(max_length=100)
     date_time = models.CharField(max_length=100)
+    current_employment_status = models.CharField(max_length=1000)
 
     def __str__(self):
         return self.First_name + self.Last_name
 
-
+CHOICES = (
+    ('10th','10th'),
+    ('12th','12th'),
+)
 class our_gems(models.Model):
 
     Name = models.CharField(max_length=50)
     Marks = models.CharField(max_length=20)
     Photo = models.FileField(upload_to='our_gems/')
     Batch = models.CharField(max_length=5)
-    Class = models.CharField(max_length=10)
+    Class = models.CharField(max_length=10,choices = CHOICES)
 
     def __str__(self):
         return self.Name
@@ -45,7 +49,7 @@ class notice_events(models.Model):
     Description = models.CharField(max_length=1000)
 
     def __str__(self):
-        return self.Title + str(self.date)
+        return self.Title +' '+ str(self.date)
 
 
 class staff(models.Model):

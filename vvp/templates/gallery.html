@@ -3,4 +3,50 @@
 {% block title %} Gallery {% endblock %}
 {% block content %}
 
+<!-- =======GALLERY======== -->
+<div class="gallery-sec" style="background-image:none; margin-top:7rem;">
+  <div class="container">
+    {% if user.is_authenticated %}
+    <div class="row">
+      <div class="add-btn" style="text-align:center; margin:0 auto;">
+        <a href="{% url 'vvp:gallery_form' %}"><button type="button" class="login-btn" name="button">Add Photo</button></a>
+      </div>
+
+
+    </div>
+    {% endif %}
+    <div class="row">
+      <div class="col-md-12">
+        <div class="header-img text-center">
+          <h1 style="color:#142850; font-size: 3rem; text-transform: uppercase; font-weight:600;">Gallery</h1>
+          <hr class="title-underline" style="border: .2rem solid rgba(20, 40, 80, 1);">
+        </div>
+
+      </div>
+
+    </div>
+    <div class="row gallerys">
+      {% for item in item %}
+      <div class="col-md-6 col-lg-4">
+        <div class="single-album">
+          <div class="album-img">
+            <a href='{{ item.Photo.url}}' data-lightbox="gal">
+              <img src='{{ item.Photo.url}}' alt="" height="250px" width="350px">
+            </a>
+
+          </div>
+
+        <div class="album-content">
+          <div class="album-info">
+            <h3>{{item.Title}}</h3>
+          </div>
+          <p>{{item.Description}}</p>
+        </div>
+      </div>
+
+    </div>
+    {% endfor %}
+  </div>
+</div>
+</div>
 {% endblock %}

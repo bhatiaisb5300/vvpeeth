@@ -20,7 +20,7 @@
   <div class="container">
     <div id="about" class="row offset">
            <!-- start animation -->
-            <div class="col-lg-6 os-animation" data-aos="fade-right" data-aos-offset="200" data-aos-delay="50">
+            <div class="col-lg-6 os-animation" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50">
             <div class="narrow text-center">
               <div class="content" id="about">
                 <h1 class="about__heading">About Vivekanand Vidyapeeth</h1>
@@ -29,21 +29,18 @@
               </div>
             </div>
             </div>
-            <div class="col-lg-6 " data-aos="fade-left" data-aos-offset="200" data-aos-delay="50" >
+            <div class="col-lg-6 " data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" >
               <img src='{% static "img/girl.jpg" %}' class="about__img"alt="">
-            </div>
-            <div class="admission">
-              <img src='{% static "img/admission.jpg" %}' alt="">
             </div>
            <!-- end animation -->
     </div>
 
     <!-- principals desk -->
     <div id="desk" class="row offset">
-      <div class="col-lg-6 " data-aos="fade-left" data-aos-offset="200" data-aos-delay="50" >
+      <div class="col-lg-6 " data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" >
         <img src='{% static "img/princi.jfif" %}' class="about__img" alt="">
       </div>
-      <div class="col-lg-6 os-animation" data-aos="fade-right" data-aos-offset="200" data-aos-delay="50">
+      <div class="col-lg-6 os-animation" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50">
       <div class="narrow text-center">
         <div class="content">
           <h1 class="about__heading">Principal's Message</h1>
@@ -68,114 +65,29 @@
           <h1 style="color:#142850;">Gallery</h1>
           <hr class="title-underline">
         </div>
-
       </div>
-
     </div>
     <div class="row">
+      {% for item in gallery %}
       <div class="col-md-6 col-lg-4">
-        <div class="single-album" data-aos="flip-left" data-aos-offset="200" data-aos-delay="200" data-aos-duration="800">
+        <div class="single-album">
           <div class="album-img">
-            <img src='{% static "img/grad.jpg" %}' alt="">
+            <a href='{{ item.Photo.url}}' data-lightbox="gal">
+              <img src='{{ item.Photo.url}}' alt="">
+            </a>
           </div>
-
         <div class="album-content">
           <div class="album-info">
-            <h3>Annual Function</h3>
-            <p>"it was great"</p>
+            <h3>{{item.Title}}</h3>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipi dolore magna aliqua. Ut enim ad minim </p>
+          <p>{{item.Description}}</p>
         </div>
       </div>
-
     </div>
-
-    <div class="col-md-6 col-lg-4">
-      <div class="single-album" data-aos="flip-up" data-aos-offset="200" data-aos-delay="250" data-aos-duration="800">
-        <div class="album-img">
-          <img src='{% static "img/grad.jpg" %}' alt="">
-        </div>
-
-      <div class="album-content">
-        <div class="album-info">
-          <h3>Annual Function</h3>
-          <p>"it was great"</p>
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipi dolore magna aliqua. Ut enim ad minim </p>
-      </div>
-    </div>
-
+    {% endfor %}
   </div>
-
-  <div class="col-md-6 col-lg-4">
-    <div class="single-album" data-aos="flip-right" data-aos-offset="200" data-aos-delay="250" data-aos-duration="800">
-      <div class="album-img">
-        <img src='{% static "img/grad.jpg" %}' alt="">
-      </div>
-
-    <div class="album-content">
-      <div class="album-info">
-        <h3>Annual Function</h3>
-        <p>"it was great"</p>
-      </div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipi dolore magna aliqua. Ut enim ad minim </p>
-    </div>
-  </div>
-
-</div>
-
-<div class="col-md-6 col-lg-4">
-  <div class="single-album" data-aos="flip-left" data-aos-offset="200" data-aos-delay="250" data-aos-duration="800">
-    <div class="album-img">
-      <img src='{% static "img/grad.jpg" %}' alt="">
-    </div>
-
-  <div class="album-content">
-    <div class="album-info">
-      <h3>Annual Function</h3>
-      <p>"it was great"</p>
-    </div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipi dolore magna aliqua. Ut enim ad minim </p>
   </div>
 </div>
-
-</div>
-<div class="col-md-6 col-lg-4">
-  <div class="single-album" data-aos="flip-down" data-aos-offset="200" data-aos-delay="250" data-aos-duration="800">
-    <div class="album-img">
-      <img src='{% static "img/grad.jpg" %}' alt="">
-    </div>
-
-  <div class="album-content">
-    <div class="album-info">
-      <h3>Annual Function</h3>
-      <p>"it was great"</p>
-    </div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipi dolore magna aliqua. Ut enim ad minim </p>
-  </div>
-</div>
-
-</div>
-<div class="col-md-6 col-lg-4">
-  <div class="single-album" data-aos="flip-left" data-aos-offset="200" data-aos-delay="250" data-aos-duration="800">
-    <div class="album-img">
-      <img src='{% static "img/grad.jpg" %}' alt="">
-    </div>
-
-  <div class="album-content">
-    <div class="album-info">
-      <h3>Annual Function</h3>
-      <p>"it was great"</p>
-    </div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipi dolore magna aliqua. Ut enim ad minim </p>
-  </div>
-</div>
-
-</div>
-
-  </div>
-</div>
-  </div>
 
 <!--
 =========News And Events===== -->
@@ -183,89 +95,68 @@
 <div style="margin-top: 5rem;" class="newsEvents">
   <div class="content">
     <center>
-      <h1  class="about__heading">Notices And Events</h1>
+      <h1 class="about__heading">News And Events</h1>
       <hr style="width: 40%;" class="title-underline">
     </center>
-
-    </div>
-  <div class="row">
-    <div class="col-md-6">
-      <div class="news-events left-news-event">
-          <div class="news-events-img">
-              <img src='{ static "img/child.jpg" %}' alt="">
-            </div>
-
-          <div class="news-events-info">
-            <div class="news-events-date">
-              <span>Tuesday</span>
-              <span>March 22 2020</span>
-            </div>
-            <h1 class="news-events-title">Plantation day Celebration</h1>
-            <p class="news-events-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sdhgfhthyhyjrkytkyyky</p>
-             <a href="#" class="news-event-read_more">Read more</a>
-          </div>
-      </div>
-    </div>
-
-
-
-    <div class="col-md-6">
-      <div class="news-events">
-          <div class="news-events-img">
-              <img src="img/child.jpg" alt="">
-          </div>
-          <div class="news-events-info">
-            <div class="news-events-date">
-              <span>Tuesday</span>
-              <span>March 22 2020</span>
-            </div>
-            <h1 class="news-events-title">Plantation day Celebration</h1>
-            <p class="news-events-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
-             <a href="#" class="news-event-read_more">Read more</a>
-          </div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="news-events left-news-event">
-          <div class="news-events-img">
-              <img src="img/child.jpg" alt="">
-          </div>
-          <div class="news-events-info">
-            <div class="news-events-date">
-              <span>Tuesday</span>
-              <span>March 22 2020</span>
-            </div>
-            <h1 class="news-events-title">Plantation day Celebration</h1>
-            <p class="news-events-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
-             <a href="#" class="news-event-read_more">Read more</a>
-          </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="news-events">
-          <div class="news-events-img">
-              <img src="img/child.jpg" alt="">
-          </div>
-          <div class="news-events-info">
-            <div class="news-events-date">
-              <span>Tuesday</span>
-              <span>March 22 2020</span>
-            </div>
-            <h1 class="news-events-title">Plantation day Celebration</h1>
-            <p class="news-events-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
-             <a href="#" class="news-event-read_more">Read more</a>
-          </div>
-      </div>
-    </div>
-
   </div>
+  <div class="row news-event-container" style="margin: 0 auto;">
+    {% for item in notice %}
+    <div class="col-md-6">
+      <div class="news-events left-news-event">
+        <div class="news-events-img">
+          <img src="{{item.Photo.url}}" alt="">
+        </div>
+        <div class="news-events-info">
+          <div class="news-events-date">
+            <span>{{item.date|date:'l'}}</span>
+            <span>{{item.date|date}}</span>
+          </div>
+          <h1 class="news-events-title">{{item.Title|truncatechars:10}}</h1>
+          <p class="news-events-text">{{item.Description|truncatechars:15}}</p>
+          <a href="#" class="news-event-read_more" data-toggle="modal" data-target="#popup{{forloop.counter}}">Read more </a>
+        </div>
+      </div>
+    </div>
 
+
+
+<!-- =================popup================= -->
+<!-- Modal 1 -->
+<div class="modal fade" id="popup{{forloop.counter}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style=" margin-left: 20px;">
+        <h1 class="modal-title news-events-title" id="exampleModalLongTitle">{{item.Title}}</h1>
+        <div class="news-events-date " style="margin-left: 8rem;">
+          <span>{{item.date|date:'l'}}</span>
+          <span>{{item.date|date}}</span>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <center>
+          <img src="{{item.Photo.url}}" style="width:90%; margin: 10px; border-radius: 10px;" alt="">
+        </center>
+        <p class="about__para" style="margin: 10px;">{{item.Description}}</p>
+      </div>
+
+      <div class="modal-footer">
+      {% if item.File %}
+      <a href="{{item.File.url}}" class="news-event-read_more " style="margin: 0 auto;" download>Download PDF</a>
+      {% endif %}
+    </div>
+    </div>
+  </div>
 </div>
-
+{% endfor %}
+</div>
+</div>
 <!-- ===============map================ -->
 
   <div style="width: 100%; margin-top: 50px;" id="map">
    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14879.086965857477!2d81.3592063!3d21.2012247!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8787cfaefa11553!2sVivekanand%20Vidyapeeth%20Hindi%20Medium%20Middle%20School!5e0!3m2!1sen!2sin!4v1585328521533!5m2!1sen!2sin" width="100%" height="500" frameborder="0" style="border:0"></iframe>
 </div>
+
 {% endblock %}

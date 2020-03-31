@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %} Add Entry {% endblock %}
+{% block content %}
+
+
+<!-- ===============login================ -->
+
+<section class="section-login">
+  <div class="row">
+
+    <div class="login">
+       <div class="login-form" style="position:relative; bottom:15rem;">
+          <form class="form"  method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="login-heading">
+              <h2>Add Entry</h2>
+              <hr class="login-underline">
+            </div>
+            {% if msg %}
+            <div class="text-grey">
+              <h3>{{msg}}</h3>
+            </div>
+            {% endif %}
+            <div class="form-group">
+               <input type="text" class="form-input" id="user" name='name' placeholder="Name" required>
+               <label for="user" class="form-label">Name</label>
+            </div>
+            <div class="form-group">
+               <input type="text" class="form-input" id="marks" name='marks' placeholder="CGPA or Percentagage" required>
+               <label for="marks" class="form-label">Marks</label>
+            </div>
+            <div class="form-group">
+               <input type="file" class="form-input" id="photo" name='photo' placeholder="Photo" required>
+               <label for="photo" class="form-label">Upload Photo</label>
+            </div>
+            <div class="form-group">
+               <input type="text" class="form-input" id="batch" name='batch' placeholder="Batch" required>
+               <label for="batch" class="form-label">Batch</label>
+            </div>
+            <div class="form-group">
+               <label for="class" class="form-label">Class</label>
+               <select id="class" class="form-control" name='class' required>
+                 <option value="10th">10th</option>
+                 <option value="12th">12th</option>
+               </select>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="login-btn" name="login">Submit</button>
+            </div>
+          </form>
+       </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
