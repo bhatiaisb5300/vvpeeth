@@ -24,9 +24,10 @@ SECRET_KEY = '*m(u#&+stj0x5^w9*gxy^yjo^oc5jc72+vqy-5lc!nl^^^th8#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
-
+if if os.path.exists(os.path.join(BASE_DIR, 'db.sqlite3')):
+    ALLOWED_HOSTS = []
+else:
+    ALLOWED_HOSTS = ['139.59.11.189']
 
 # Application definition
 
