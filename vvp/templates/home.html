@@ -88,7 +88,39 @@
   </div>
   </div>
 </div>
+<div class="gallery-sec">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="header-img text-center">
+          <h1 style="color:#142850;">Gallery</h1>
+          <hr class="title-underline">
+        </div>
 
+      </div>
+
+    </div>
+    <div class="row">
+      {% for item in gallery %}
+      <div class="col-md-6 col-lg-4">
+        <div class="single-album" data-aos="flip-left" data-aos-offset="200" data-aos-delay="200" data-aos-duration="800">
+          <div class="album-img">
+            <img src='{{ item.Photo.url}}' alt="">
+          </div>
+
+          <div class="album-content">
+            <div class="album-info">
+              <h3>{{item.Title}}</h3>
+            </div>
+            <p>{{item.Description}}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
 <!--
 =========News And Events===== -->
 
