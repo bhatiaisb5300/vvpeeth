@@ -13,12 +13,6 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AddField(
-            model_name='alumni',
-            name='current_employment_status',
-            field=models.CharField(default='', max_length=1000),
-            preserve_default=False,
-        ),
-        migrations.AddField(
             model_name='gallery',
             name='date',
             field=models.DateTimeField(auto_now_add=True, default=datetime.datetime(2020, 4, 1, 5, 24, 9, 379478, tzinfo=utc)),
