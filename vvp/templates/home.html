@@ -100,23 +100,25 @@
       </div>
 
     </div>
-    <div class="row">
-      {% for item in gallery %}
-      <div class="col-md-6 col-lg-4">
-        <div class="single-album" data-aos="flip-left" data-aos-offset="200" data-aos-delay="200" data-aos-duration="800">
-          <div class="album-img">
-            <img src='{{ item.Photo.url}}' alt="">
-          </div>
 
-          <div class="album-content">
-            <div class="album-info">
-              <h3>{{item.Title}}</h3>
-            </div>
-            <p>{{item.Description}}</p>
+    <br>
+    <div class="row">
+    {% for item in gallery %}
+    <div class="col-md-6 col-lg-4">
+      <div class="single-album" data-aos="flip-left" data-aos-offset="200" data-aos-delay="200" data-aos-duration="800">
+        <div class="album-img">
+          <img src='{{ item.Photo.url}}' alt="">
+        </div>
+
+        <div class="album-content">
+          <div class="album-info">
+            <h3>{{item.Title}}</h3>
           </div>
+          <p>{{item.Description}}</p>
         </div>
       </div>
-      {% endfor %}
+    </div>
+    {% endfor %}
     </div>
   </div>
 
