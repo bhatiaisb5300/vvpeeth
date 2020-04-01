@@ -3,7 +3,7 @@ from . import views
 app_name = 'vvp'
 urlpatterns = [
     path('',views.index,name='index'),
-    path('alumni/',views.alumni,name='alumni'),
+    path('alumni/',views.alumni_view,name='alumni'),
     path('our-gems/',views.our_gems_view,name='gems'),
     path('our-gems/add/',views.gems_form,name='gems_form'),
     path('gallery/',views.gallery_view,name='gallery'),

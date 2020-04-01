@@ -12,7 +12,7 @@ def index(request):
     obj_notice = reversed(notice_events.objects.all()[:4])
     return render(request,'home.html',{'gallery':obj_gallery,'notice':obj_notice})
 
-def alumni(request):
+def alumni_view(request):
     if request.method=='POST':
         obj = alumni()
         obj.First_name = request.POST['fname']
