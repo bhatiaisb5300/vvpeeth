@@ -13,7 +13,7 @@ class alumni(models.Model):
     current_employment_status = models.CharField(max_length=1000)
 
     def __str__(self):
-        return self.First_name + self.Last_name
+        return self.First_name + ' ' + self.Last_name
 
 CHOICES = (
     ('10th','10th'),
@@ -36,6 +36,7 @@ class gallery(models.Model):
     Photo = models.FileField(upload_to='gallery/')
     Title = models.CharField(max_length=20)
     Description = models.CharField(max_length=1000)
+    date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.Title
@@ -47,6 +48,7 @@ class notice_events(models.Model):
     File = models.FileField(upload_to='n_e/docs',null=True,blank=True)
     Title = models.CharField(max_length=30)
     Description = models.CharField(max_length=1000)
+    date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.Title +' '+ str(self.date)

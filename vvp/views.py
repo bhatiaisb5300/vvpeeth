@@ -8,8 +8,8 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def index(request):
-    obj_gallery = reversed(gallery.objects.all()[:6])
-    obj_notice = reversed(notice_events.objects.all()[:4])
+    obj_gallery = reversed(gallery.objects.all().order_by('date')[:6])
+    obj_notice = reversed(notice_events.objects.all().order_by('date')[:4])
     return render(request,'home.html',{'gallery':obj_gallery,'notice':obj_notice})
 
 def alumni_view(request):
@@ -56,7 +56,7 @@ def committeemembers(request):
     return render(request,'committee-members.html',{'item':obj})
 
 def gallery_view(request):
-    obj = reversed(gallery.objects.all())
+    obj = reversed(gallery.objects.all().order_by('date'))
     return render(request,'gallery.html',{'item':obj})
 
 @login_required
@@ -71,7 +71,7 @@ def gallery_form(request):
     return render(request,'gallery_form.html')
 
 def notice(request):
-    obj = reversed(notice_events.objects.all())
+    obj = reversed(notice_events.objects.all().order_by('date'))
     return render(request,'notice.html',{'item':obj})
 
 @login_required
