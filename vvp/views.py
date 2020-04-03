@@ -8,8 +8,8 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def index(request):
-    obj_gallery = reversed(gallery.objects.all().order_by('date')[:6])
-    obj_notice = reversed(notice_events.objects.all().order_by('date')[:4])
+    obj_gallery = gallery.objects.all().order_by('date').reverse()[:6]
+    obj_notice = notice_events.objects.all().order_by('date').reverse()[:4]
     return render(request,'home.html',{'gallery':obj_gallery,'notice':obj_notice})
 
 def alumni_view(request):
