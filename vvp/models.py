@@ -56,7 +56,7 @@ class notice_events(models.Model):
 
 class staff(models.Model):
 
-    s_no = models.CharField(max_length=4)
+    s_no = models.IntegerField(default=0)
     name = models.CharField(max_length=50)
     Designation = models.CharField(max_length=100)
     Qualification = models.CharField(max_length=100)
@@ -67,7 +67,7 @@ class staff(models.Model):
 
 class committee(models.Model):
 
-    s_no = models.CharField(max_length=4)
+    s_no = models.IntegerField(default=0)
     name = models.CharField(max_length=50)
     Designation = models.CharField(max_length=100)
 
