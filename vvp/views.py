@@ -20,7 +20,7 @@ def alumni_view(request):
         obj.Email = request.POST['email']
         obj.Phone = request.POST['phone']
         obj.Batch = request.POST['batch']
-         try :
+        try :
              obj.Photo = request.FILES['photo']
         except:
             pass
