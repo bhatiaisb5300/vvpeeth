@@ -20,7 +20,10 @@ def alumni_view(request):
         obj.Email = request.POST['email']
         obj.Phone = request.POST['phone']
         obj.Batch = request.POST['batch']
-        obj.Photo = request.FILES['photo']
+         try :
+             obj.Photo = request.FILES['photo']
+        except:
+            pass
         obj.address = request.POST['add1'] + ' ' + request.POST['add2'] + ' ' + request.POST['city'] + ' ' + request.POST['state'] + ' ' + request.POST['zipcode']
         obj.date_time = timezone.now()
         obj.current_employment_status = request.POST['current']

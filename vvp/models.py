@@ -7,7 +7,7 @@ class alumni(models.Model):
     Email = models.EmailField(max_length=50)
     Phone = models.CharField(max_length=15)
     Batch = models.CharField(max_length=5)
-    Photo = models.FileField(upload_to='alumni/')
+    Photo = models.FileField(upload_to='alumni/',blank=True,null=True)
     address = models.CharField(max_length=100)
     date_time = models.CharField(max_length=100)
     current_employment_status = models.CharField(max_length=1000)

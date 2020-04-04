@@ -23,10 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '*m(u#&+stj0x5^w9*gxy^yjo^oc5jc72+vqy-5lc!nl^^^th8#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 if os.path.exists(os.path.join(BASE_DIR, 'db.sqlite3')):
+    DEBUG = True
     ALLOWED_HOSTS = []
 else:
+    DEBUG = False
     ALLOWED_HOSTS = ['139.59.11.189','vvpeethbhilai.tk','www.vvpeethbhilai.tk']
 
 # Application definition
