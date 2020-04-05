@@ -176,19 +176,12 @@
 .about__heading{
   color: #142850;
 }
-.admission{
-  height: 15rem;
-  width: 45rem;
-  position: relative;
-  left: 62.5rem;
-  bottom: 20rem;
 
-}
 .admission img{
-  max-width: 45rem;
-  max-height: 20rem
+  width: 100%;
+  margin: 2rem 0;
+  border-radius: 2rem;
 }
-
 
 /* ==========News and Events========== */
 
